@@ -1,0 +1,27 @@
+{
+  "data":{
+
+      "name":"DashTeam",
+
+    "youtube":{
+      "subscribers":323000,
+      "lastDay":322700,
+      "age": [
+        {"x": ">20", "y": 22},
+        {"x": ">30", "y":70 },
+        {"x": "<50","y": 8}
+      ]
+    },
+    "linkedIn":{
+      "followers":1231,
+      "lastDay":1230
+    },
+    "twitter":{
+      "followers":2003,
+      "lastDay":2000
+    },
+    "facebook":{
+      "followers":[30775,31017,32000, 38000, 39713, 39990, 41000 ]
+    }
+  }
+}

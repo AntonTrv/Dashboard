@@ -1,0 +1,122 @@
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    transition: all .5s ease-out;
+}
+
+.calc-menu-width {
+    width: calc(100% - 60px);
+}
+
+.main-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: max-content;
+}
+
+.item {
+    margin: 15px;
+    background-color: #344055;
+    color: #F9EBE0;
+    text-align: center;
+    min-height: 120px;
+
+    @media screen and (min-width: 1200px) and (min-height: 1000px) {
+        min-height: 200px;
+    }
+
+    @media screen and (min-width: 2000px) and (min-height: 2000px) {
+        min-height: 480px;
+    }
+}
+
+.small-item {
+    background-color: #344055;
+
+}
+
+.small-items-container {
+
+    height: max-content;
+
+    @include for-phone-only {
+        width: calc(100% / 12 * 12)
+    }
+
+    @include for-tablet-portrait-up {
+        width: calc(100% / 12 * 6)
+    }
+
+    @include for-tablet-landscape-up {
+        width: calc(100% / 12 * 2);
+    }
+
+}
+
+.big-item{
+    @include for-phone-only {
+        width: calc(100% / 12 * 12)
+    }
+
+    @include for-tablet-portrait-up {
+        width: calc(100% / 12 * 6 - 30px)
+    }
+
+    @include for-tablet-landscape-up {
+        width: calc(100% / 12 * 4 - 30px);
+    }
+
+
+
+}
+
+
+.medium-item {
+
+    @include for-phone-only {
+        width: calc(100% / 12 * 12)
+    }
+
+    @include for-tablet-portrait-up {
+        width: calc(100%/12 * 6 - 30px);
+    }
+
+    @include for-tablet-landscape-up {
+        width: calc(100%/12 * 3 - 30px);
+    }
+
+
+}
+
+
+
+
+
+
+

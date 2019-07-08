@@ -1,0 +1,26 @@
+nav {
+    width: 0;
+    background-color: #208AAE;
+    height: 100%;
+    transition: all .5s ease-out;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+    color: #F9EBE0;
+    font-weight: bold;
+}
+
+.visible{
+    width: 60px;
+}
+
+

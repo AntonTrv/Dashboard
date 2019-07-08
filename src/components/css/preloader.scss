@@ -1,0 +1,35 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #208AAE;
+}
+
+.spinner {
+  height: 50px;
+  width: 50px;
+  border: 5px solid #F9EBE0;
+  border-right: #208AAE;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: 1s spinner-rotation infinite linear;
+}
+
+@keyframes spinner-rotation {
+
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+}
+
+
